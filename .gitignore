@@ -1,0 +1,31 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Visual Studio
+.vs/
+.vscode/
+
+*.VC.db
+*.suo
+*.opensdf
+*.sdf
+*.user
+*.userprefs
+
+# Build files
+*.sln
+*.csproj
+*.vcxproj
+*.vcxproj.filters
+
+# Logs
+*.log
+
+# Blender temporary files
+*.blend1
+*.blend2
+*.blend3
+*.tmp
