@@ -85,7 +85,7 @@ void ATheGuardianCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
-
+	UE_LOG(LogTemp, Warning, TEXT("Look triggered: X=%f Y=%f"), LookAxisVector.X, LookAxisVector.Y);
 	// route the input
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
 }
@@ -114,9 +114,14 @@ void ATheGuardianCharacter::DoLook(float Yaw, float Pitch)
 {
 	if (GetController() != nullptr)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("DoLook: Controller valid, Yaw=%f Pitch=%f"), Yaw, Pitch);
 		// add yaw and pitch input to controller
 		AddControllerYawInput(Yaw);
 		AddControllerPitchInput(Pitch);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("DoLook: Controller is NULL!"));
 	}
 }
 

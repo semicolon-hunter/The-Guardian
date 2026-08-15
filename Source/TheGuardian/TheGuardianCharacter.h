@@ -49,6 +49,12 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* MouseLookAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int Health = 100;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int HitDamage = 20;
+
 public:
 
 	/** Constructor */
